@@ -25,5 +25,10 @@ public class ThreadDemo  {
 
         new Thread(new Thread1()).start();
         System.out.println(Thread.currentThread().getName() + "....");
+
+        new Thread(() -> {
+            System.out.println(Thread.currentThread().getContextClassLoader());
+            System.out.println(Thread.currentThread().getThreadGroup());
+        }).start();
     }
 }
