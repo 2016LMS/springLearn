@@ -1,6 +1,12 @@
 package org.mslin.springLearning.javaBase.Sorts.insert;
 
-public class InsertSort {
+public class DirectInsertSort {
+
+    static void swap(int a, int b) {
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
 
     static void insertSort(int a[], int n) {
         int j = 0;
@@ -19,9 +25,24 @@ public class InsertSort {
         }
     }
 
+    static void insert2(int[] a) {
+        int anchor = 0;
+        int j = 0;
+        for (int i = 1; i < a.length; i++) {
+            j = i;
+            anchor = a[i];
+            if (a[j - 1] < a[j]) continue; //不动直接下次循环
+            while( j > 0 && a[j - 1] > anchor) {
+                    a[j] = a[j-1];
+                    j--;
+            }
+            a[j] = anchor;
+        }
+    }
+
     public static void main(String[] args) {
         int[] a = new int[]{2,6,10,3,10,5};
-        insertSort(a, a.length);
+        insert2(a);
         for (int h : a) {
             System.out.println(h);
         }

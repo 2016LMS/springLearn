@@ -10,7 +10,7 @@ public class QuickSort {
         }
     }
 
-
+    //快排优化，只对长度大于8的子序列进行快速排序递归， 当子序列长度小于8时退出循环， 对整个序列进行直接插入排序（当序列基本有序时使用直接插入排序效率很高）
     public static void quickSort(int[] array, int l, int r) {
         if (l < r) {
             int anchor = adjustArray(array, l, array.length-1);

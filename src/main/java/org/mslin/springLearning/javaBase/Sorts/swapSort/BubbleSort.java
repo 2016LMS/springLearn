@@ -1,6 +1,6 @@
 package org.mslin.springLearning.javaBase.Sorts.swapSort;
 
-public class Bubble {
+public class BubbleSort {
     public static int[] sort(int[] array) {
         if (array == null || array.length == 0) return null;
         int tmp;
