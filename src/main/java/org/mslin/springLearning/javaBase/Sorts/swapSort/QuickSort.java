@@ -10,11 +10,7 @@ public class QuickSort {
         }
     }
 
-    public static void swap(int a, int b) {
-        int tmp = a;
-        a = b;
-        b= tmp;
-    }
+
     public static void quickSort(int[] array, int l, int r) {
         if (l < r) {
             int anchor = adjustArray(array, l, array.length-1);
