@@ -7,5 +7,6 @@ public class ObjectDemo {
         int day = Integer.parseInt(dayOfWeek.substring(dayOfWeek.indexOf(",") + 1, dayOfWeek.lastIndexOf(",")));
         int grade = Integer.parseInt(dayOfWeek.substring(dayOfWeek.lastIndexOf(",") + 1 ));
         System.out.println(sterm +" " + day + " "  + grade);
+        System.out.println(5 / 2);
     }
 }

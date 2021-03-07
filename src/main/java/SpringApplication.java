@@ -6,6 +6,8 @@ public class SpringApplication {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         User user = applicationContext.getBean(User.class);
+        int count = applicationContext.getBeanDefinitionCount();
+        System.out.println(count);
         System.out.println(user.getId());
     }
 }
