@@ -1,4 +1,4 @@
-package org.mslin.springLearning.javaBase.Sorts;
+package org.mslin.springLearning.javaBase.Sorts.ChooseSort;
 
 public class HeapSort3 {
     static void sort(int[] a) {

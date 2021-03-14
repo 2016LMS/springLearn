@@ -2,8 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="book" class="org.mslin.springLearning.model.User">
+    <bean id="user" class="org.mslin.springLearning.model.User">
         <property name="id" value="12"/>
         <property name="name" value="names"/>
+    </bean>
+
+    <bean id="sportModel" class="org.mslin.springLearning.model.Car">
+        <constructor-arg ref="user" name="user"/>
+        <constructor-arg name="name" value="sports"/>
+        <constructor-arg name="price" value="100"/>
     </bean>
 </beans>
