@@ -2,6 +2,9 @@ package org.mslin.springLearning.javaBase.Thread;
 
 import java.util.concurrent.locks.LockSupport;
 
+/**
+ * 循环打印ABCABC
+ */
 public class PrintTest {
     public static class ThreadPrinter implements Runnable {
         private String name;
